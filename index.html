@@ -60,7 +60,7 @@
                                     </p>
                                 </div>
                                 <div class="heroscreen__left-btn">
-                                    <a href="#">Yes, I'm looking for it</a>
+                                    <a href="#formanchor">Yes, I'm looking for it</a>
                                 </div>
                             </div>
                         </div>
@@ -196,7 +196,7 @@
                                 <p>
                                     <b>We are Here to Help You!</b> We have affordable prices. Click the link and
                                     schedule an appointment! Register now and <b>Get a free</b> consultation! Or Give us
-                                    a call: <b>347-403-9726.</b>
+                                    a call: <a href="tel:347-403-9726"><b>347-403-9726.</b></a>
                                 </p>
                             </div>
                         </div>
@@ -208,7 +208,7 @@
                 <img src="img/contact_img.jpg" alt="image" class="contacts__frame">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xl-5 col-lg-6">
+                        <div class="col-xl-5 col-lg-6" id="formanchor">
                             <div class="contacts__form">
                                 <h2>
                                     Sign up for a free consultation
@@ -217,7 +217,7 @@
                                     <input type="text" placeholder="First name">
                                     <input type="text" placeholder="Last name">
                                     <input type="text" placeholder="Email address">
-                                    <input type="text" placeholder="Phone number">
+                                    <input class="phoneinp" type="text" placeholder="Phone number">
                                     <button>
                                         Submit
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -288,6 +288,7 @@
     </div>
 
     <script src="js/lib/jquery.js"></script>
+    <script src="js/lib/jquery.inputmask.js"></script>
     <script src="js/lib/plyr-player.js"></script>
     <script src="js/main.js"></script>
 

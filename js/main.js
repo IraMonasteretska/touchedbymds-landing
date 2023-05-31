@@ -10,6 +10,18 @@ $('.back-top').click(function () {
     return false;
 });
 
+
+    // input mask
+
+    if ($('.phoneinp').length) {
+        $('.phoneinp').inputmask({
+            mask: "+1" + "9999999999",
+            placeholder: "_",
+            showMaskOnFocus: true,
+            showMaskOnHover: true,
+        });
+    }
+
 });
 
 
