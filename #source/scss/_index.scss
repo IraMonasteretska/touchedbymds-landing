@@ -1,0 +1,543 @@
+.heroscreen {
+    background-image: url(../img/heroscreen_back.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 110px);
+}
+
+
+.heroscreen__left-content {
+    margin-bottom: 40px;
+    h1 {
+        font-family: 'Urbanist';
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 124%;
+        letter-spacing: 0.01em;
+        color: #222222;
+        margin-bottom: 35px;
+
+        span {
+            color: #DFB944;
+        }
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 170%;
+        color: #222222;
+    }
+}
+
+.heroscreen__left-btn {
+    a {
+        background: linear-gradient(0deg, #0A2141, #0A2141), linear-gradient(267.61deg, #FBCF4A 1.57%, #FFD554 100%);
+        box-shadow: 0px 6px 10px 1px rgba(11, 10, 24, 0.04);
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+        font-family: 'Urbanist';
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        padding: 22px 67px 22px 40px;
+        position: relative;
+        display: inline-block;
+        transition: .3s;
+
+        &:after {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background-image: url(../img/svg/arrow_btn.svg);
+            position: absolute;
+            top: 50%;
+            right: 40px;
+            transform: translateY(-50%);
+            transition: .3s;
+        }
+
+        &:hover{
+            filter: brightness(150%);
+            &:after{
+                right: 30px;
+            }
+        }
+    }
+}
+
+.heroscreen__right-video {
+    max-width: 740px;
+    width: 100%;
+    margin: 0 0 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.plyr__poster {
+    background-size: cover;
+}
+
+.plyr--full-ui.plyr--video .plyr__control--overlaid {
+    &:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: '';
+        width: 70px;
+        height: 70px;
+        background-size: cover;
+        background-image: url(../img/svg/play-button.svg);
+    }
+}
+
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded=true] {
+    background: #DFB944;
+}
+
+.plyr--full-ui input[type=range] {
+    color: #DFB944;
+    ;
+}
+
+
+//  questions -------------------------------- //
+
+.questions {
+    background-color: #fcfcfc;
+    padding: 80px 0;
+}
+
+.questions__row {
+    padding: 40px 0;
+    border-bottom: 1.5px solid rgba(10, 33, 65, 0.1);
+
+    &:first-child {
+        padding-top: 0;
+    }
+
+    h2 {
+        font-family: 'Urbanist';
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 130%;
+        color: #222222;
+        max-width: 530px;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 170%;
+        color: #222222;
+
+        &+p {
+            margin-top: 10px;
+        }
+    }
+}
+
+
+//  contacts --------------- //
+
+.contacts {
+    padding-top: 100px;
+    position: relative;
+
+    .contacts__frame {
+        position: absolute;
+        width: 50%;
+        max-height: 740px;
+        object-fit: cover;
+        right: 0;
+        top: 100px;
+        bottom: 0;
+        border-radius: 30px 0 0 30px;
+    }
+}
+
+.contacts__form {
+    padding: 60px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 20px -4px rgba(54, 19, 19, 0.04);
+    border-radius: 10px;
+
+    h2 {
+        font-family: 'Urbanist';
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 130%;
+        color: #222222;
+        margin-bottom: 45px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input {
+        width: 100%;
+        border: none;
+        padding: 18px 24px;
+        background: #FFFFFF;
+        border-bottom: 1.5px solid rgba(10, 33, 65, 0.1);
+        color: #424242;
+        font-size: 16px;
+        line-height: 130%;
+        margin-bottom: 34px;
+
+        &::placeholder {
+            transition: .3s;
+            opacity: 0.7;
+            color: #424242;
+        }
+
+        &:focus::placeholder {
+            opacity: 0;
+        }
+    }
+
+    button {
+        margin-top: 15px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 62px;
+        background: linear-gradient(0deg, #0A2141, #0A2141), linear-gradient(267.61deg, #FBCF4A 1.57%, #FFD554 100%);
+        box-shadow: 0px 6px 10px 1px rgba(11, 10, 24, 0.04);
+        border-radius: 8px;
+        font-family: 'Urbanist';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: #FFFFFF;
+        border: none;
+        outline: none;
+        transition: .3s;
+
+        svg {
+            transition: .3s;
+            margin-left: 8px;
+        }
+
+        &:hover {
+            filter: brightness(150%);
+
+            svg {
+                transform: translateX(8px);
+            }
+        }
+
+    }
+}
+
+.contacts__bottom {
+    margin-top: 100px;
+    background: #0A2141;
+
+    h2 {
+        font-family: 'Urbanist';
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 130%;
+        color: #FFFFFF;
+    }
+}
+
+.contacts__bottom-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 125px;
+    width: 100%;
+}
+
+.contacts__bottom-info {
+    display: flex;
+
+    >a {
+        display: flex;
+        align-items: center;
+        transition: .3s;
+
+        &:hover {
+            opacity: .6;
+        }
+
+        p {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+            line-height: 130%;
+            color: #FFFFFF;
+            padding-bottom: 4px;
+            margin-left: 16px;
+        }
+
+        img {
+            width: 48px;
+            height: 48px;
+            background-size: cover;
+        }
+
+        &+a {
+            margin-left: 40px;
+        }
+    }
+}
+
+.contacts__bottom-btn a {
+    display: block;
+    padding: 19px 45px;
+    font-family: 'Urbanist';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    color: #FFFFFF;
+    transition: .3s;
+    background: rgba(248, 248, 248, 0.1);
+    border-radius: 8px;
+    margin-left: 40px;
+
+    &:hover {
+        filter: brightness(70%);
+        transform: translateY(-6px);
+    }
+}
+
+
+// ADAPTIVE ------------------------------------------- //
+@media (max-width:1600px) {
+    .heroscreen__left-content h1 {
+        font-size: 54px;
+    }
+
+    .contacts .contacts__frame {
+        height: 700px;
+    }
+}
+
+
+@media (max-width:1399.8px) {
+
+    .contacts__bottom-info>a img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .contacts__bottom h2 {
+        font-size: 38px;
+    }
+
+    .contacts__bottom {
+        margin-top: 80px;
+    }
+
+    .contacts__form h2 {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    .contacts .contacts__frame {
+        top: 80px;
+    }
+
+    .contacts {
+        padding-top: 80px;
+    }
+
+    .heroscreen__left-content h1 {
+        font-size: 47px;
+    }
+}
+
+@media (max-width:1199.8px) {
+    .contacts__bottom-inner {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+
+    .contacts__bottom h2 {
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+
+    .contacts .contacts__frame {
+        height: 550px;
+    }
+
+    .contacts__form input {
+        padding: 15px 16px;
+        margin-bottom: 25px;
+    }
+
+    .contacts__form h2 {
+        font-size: 34px;
+    }
+
+    .contacts__form {
+        padding: 45px 30px;
+    }
+
+    .questions__row h2 {
+        font-size: 28px;
+    }
+
+    .questions__row p {
+        line-height: 160%;
+    }
+}
+
+@media (max-width:991.8px) {
+    .contacts__bottom-info {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .contacts__bottom h2 {
+        font-size: 30px;
+    }
+
+    .contacts__bottom-info>a+a {
+        margin-left: 20px;
+    }
+
+    .contacts__bottom-info>a p {
+        font-size: 12px;
+        margin-left: 12px;
+    }
+
+    .contacts__bottom-btn a {
+        padding: 15px 20px;
+        font-size: 16px;
+        margin-left: 20px;
+    }
+
+    .contacts {
+        padding-top: 0;
+    }
+
+    .contacts .contacts__frame {
+        border-radius: 0;
+        margin-bottom: 40px;
+        height: 400px;
+        width: 100%;
+        position: relative;
+        top: initial;
+        right: initial;
+    }
+
+    .questions__row h2 {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .heroscreen {
+        height: auto;
+        padding: 50px 0;
+    }
+
+    .heroscreen__left {
+        margin-bottom: 50px;
+    }
+}
+
+
+@media (max-width:767.8px) {
+    .contacts__bottom-info {
+        flex-wrap: wrap;
+    }
+
+    .contacts__bottom-btn {
+        order: -1;
+        width: 100%;
+
+        a {
+            width: 100%;
+            text-align: center;
+            display: inline-block;
+            margin-bottom: 30px;
+            margin-left: 0px;
+        }
+    }
+
+    .contacts .contacts__frame {
+        margin-bottom: 30px;
+        height: 350px;
+    }
+
+    .contacts__form h2 {
+        font-size: 28px;
+    }
+
+    .contacts__form {
+        padding: 25px 20px;
+    }
+
+    .contacts__bottom {
+        margin-top: 55px;
+    }
+
+    .questions__row {
+        padding: 35px 0;
+    }
+
+    .questions__row h2 {
+        font-size: 22px;
+    }
+
+    .questions__row p {
+        font-size: 16px;
+    }
+
+    .questions {
+        padding: 60px 0;
+    }
+
+    .heroscreen__left-content h1 {
+        font-size: 32px;
+    }
+
+    .heroscreen__left-btn a {
+        padding: 22px 67px 22px 35px;
+        width: 100%;
+    }
+
+    .plyr--full-ui.plyr--video .plyr__control--overlaid:after {
+        width: 58px;
+        height: 58px;
+    }
+
+}
+
+@media (max-width:575.8px) {
+
+    .contacts__bottom-info {
+        justify-content: space-evenly;
+    }
+
+    .contacts__bottom-info>a p {
+        display: none;
+    }
+
+    .contacts .contacts__frame {
+        margin-bottom: 20px;
+        height: 250px;
+    }
+
+    .contacts__form {
+        padding: 25px 5px;
+    }
+
+}
